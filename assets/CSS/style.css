@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    font-family: "Roboto", sans-serif;
+    background-color: #e5e5e5;
+    grid-template-columns: 200px 1fr 1fr ;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 'navbar navbar navbar'
+                         'asidebar main main'
+                         'footer footer footer';
+
+
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: #fca311;
+    color: #e5e5e5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tittle{
+        font-size: 26px;
+    }
+}
+
+.asidebar{
+    grid-area: asidebar;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .asidebar-categories{
+        padding-top: 10px;
+
+        .category{
+            font-size: 18px;
+            font-weight: 300;
+            padding: 3px;
+        }
+        span{
+            color: #5e5e5e;
+        }
+    }
+
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    max-height: 1200px;
+    justify-content: center;
+    align-items: center;
+
+
+    .galery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        padding: 50px;
+
+        .card{
+            width:400px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+
+            .card-title{
+                text-align: center;
+                padding-top: 5px;
+
+            }
+            .card-price{
+                text-align: center;
+                font-weight: 300;
+                padding: 5px;
+            }
+
+            .btn{
+                height: 10%;
+                background-color: #14213d;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+            }
+
+            .card-img{
+                height: 80%;
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+                display: block;
+
+            }
+            a{
+                color: #e5e5e5;
+                text-decoration: none;
+                font-weight: 300;
+            }
+            .btn:hover{
+                background-color: #669bbc;
+                transition: 2ms ease;
+
+            }
+
+        }
+    }
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #fca311;
+    color: #e5e5e5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
